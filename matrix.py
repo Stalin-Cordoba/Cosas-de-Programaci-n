@@ -6,12 +6,14 @@ import os
 # Los weones culiaos que guardan todo
 
 ListaVectores = []
+ListaMatrices = []
 
 # -----------------
 # ----Funciones----
 # -----------------
 
 # Funciones misceláneas
+
 def limpiarTerminal(): # Literalmente limpia la terminal xddddddddd
     
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -35,6 +37,26 @@ def eleccionNumero():
             break
 
     return num
+
+def Contexto():
+
+    limpiarTerminal()
+                    
+    print("-" * 10,"DEFINICIONES", "-" * 10)
+    
+    print("\nVector: Es un arreglo unidimensional, que se clasifica en dos subtipos:\n")
+    print("1. Vector-Columna (consiste de una sóla columna, y de 'm' filas)")
+    print("2. Vector-Fila (consiste de una sóla fila, y de 'n' columnas)")
+    print("\nMatriz: Es un arreglo bidimensional, compuesto de filas y columnas")
+
+    print("-" * 10, "TIPOS DE MATRICES", "-" * 10)
+
+    print("Cuadrada: Una matriz es cuadrada si tienen el mismo número de filas y columnas")
+    print("Identidad: Es la matriz que actúa el elemento neutro de la multiplicación (en palabras simples, actúa como el 1)")
+
+    Continuar()
+                    
+    limpiarTerminal()
 
 # Funcione para las operaciones con vectores
 
@@ -260,12 +282,53 @@ def main():
 
                     limpiarTerminal()
                     
-                    elegirOperacionVector()
+                    if len(ListaVectores) <= 1:
+
+                        print("Sólo hay un vector, o no hay vectores en lo absoluto")
+                        Continuar()
+                    else:
+                    
+                        elegirOperacionVector()
                     
                     limpiarTerminal()
 
                     break
-                
+
+                case "4":
+
+                    limpiarTerminal()
+                    
+                    print("A1")
+                    Continuar()
+                    
+                    limpiarTerminal()
+                    break
+
+                case "5":
+
+                    limpiarTerminal()
+                    
+                    print("A1")
+                    Continuar()
+                    
+                    limpiarTerminal()
+                    break
+
+                case "6":
+
+                    limpiarTerminal()
+                    
+                    print("A1")
+                    Continuar()
+                    
+                    limpiarTerminal()
+                    break
+
+                case "7":
+
+                    Contexto()
+                    break
+
                 case "0":
 
                     break # Aquí acaba la wea
