@@ -36,7 +36,7 @@ def eleccionNumero():
 
     return num
 
-# Funciones para los vectores
+# Funcione para las operaciones con vectores
 
 def elementosVector(númeroElementos):
 
@@ -182,11 +182,11 @@ def restarVectores(vector1, vector2):
 
 def multiplicarVectores(vector1, vector2):
 
-    productoTotal = []
-
+    productoTotal = 0
+    
     for i in range(0, len(vector1)):
 
-        productoTotal.append(vector1[i] * vector2[i])
+        productoTotal += (vector1[i] * vector2[i])
 
     return productoTotal
 
@@ -201,6 +201,7 @@ def elegirOperacionMatrix():
     print("4) Eliminación por Gauss-Jordan")
     print("5) Cálculo de la inversa")
     print("6) Cálculo de la determinante")
+    print("7) Volver al menú")
 
 # --------------------
 # ----Función main----
@@ -211,9 +212,13 @@ def main():
     while True:
 
         print("Bienvenido a esta mierda\n")
-        print("1) Crear vectores")
+        print("1) Creación de vectores")
         print("2) Mostrar vectores")
         print("3) Operaciones con vectores")
+        print("4) Creación de Matrices")
+        print("5) Mostrar matrices")
+        print("6) Operaciones con matrices")
+        print("7) Contexto para algunas cositas (uwu)")
         print("0) Salir\n")
         print("Ingrese una opción\n")
 
