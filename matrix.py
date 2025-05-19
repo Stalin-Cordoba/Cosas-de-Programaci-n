@@ -41,27 +41,51 @@ def eleccionNumero():
 def Contexto():
 
     limpiarTerminal()
-                    
-    print("-" * 10,"DEFINICIONES", "-" * 10)
     
-    print("\nVector: Es un arreglo unidimensional, que se clasifica en dos subtipos:\n")
-    print("1. Vector-Columna (consiste de una sóla columna, y de 'm' filas)")
-    print("2. Vector-Fila (consiste de una sóla fila, y de 'n' columnas)")
-    print("\nMatriz: Es un arreglo bidimensional, compuesto de filas y columnas\n")
+    while True:
 
-    print("-" * 10, "TIPOS DE MATRICES", "-" * 10)
+        print("-" * 5, "Escoge las cosas que deseas saber el contexto", "-" * 5)
+        print("\n1) Definiciones generales")
+        print("2) Detalles sobre los procedimientos con respecto a las operaciones de vectores y matrices")
+        print("3) Volver al menú")
 
-    print("\nCuadrada: Una matriz es cuadrada si tienen el mismo número de filas y columnas")
-    print("Identidad: Es la matriz que actúa el elemento neutro de la multiplicación con matrices (en palabras simples, actúa como el 1)")
-    print("Diagonal: Una matriz es diagonal si y sólo si los elementos por debajo y por encima de la diagonal principal son ceros")
-    print("Triangular: Una matriz es triangular si los elementos por debajo o por encima de la diagonal principal son ceros. Hay 2 tipos:\n")
-    print("Inferior: Una matriz es triangular inferior si los elementos por encima de la diagonal principal son ceros.")
-    print("Superior: Una matriz es triangular superior si los elementos por debajo de la diagonal principal son ceros.")
-    print("Singular: Una matriz es singular si no tiene inversa.")
+        while True:
 
-    Continuar()
+            elegir = input()
+
+            match elegir:
+
+                case "1":
+
+                    limpiarTerminal()
+
+                    print("-" * 10, "DEFINICIONES GENERALES", "-" * 10)
+                    print("\n1. Vector: Es un arreglo unidimensional con 'n' elementos. Hay 2 tipos de vectores:\n")
+                    print("1.1 Vector-columna: Es un vector compuesto de una sóla columna y de 'n' filas.")
+                    print("1.2 Vector-fila: Es un vector compuesto de una sóla fila, y de 'n' columnas.\n")
+                    print("2. Matriz: Es un arreglo bidimensional que está compuesto de 'm' filas por 'n' columnas.")
+
+                    Continuar()
+
+                    limpiarTerminal()
                     
-    limpiarTerminal()
+                    break
+
+                case "2":
+
+                    break
+
+                case "3":
+
+                    break
+
+                case _:
+
+                    print("Ingrese una opción válida")
+
+        if elegir == "3":
+
+            break
 
 # Funcione para las operaciones con vectores
 
