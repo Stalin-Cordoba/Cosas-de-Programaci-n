@@ -47,12 +47,17 @@ def Contexto():
     print("\nVector: Es un arreglo unidimensional, que se clasifica en dos subtipos:\n")
     print("1. Vector-Columna (consiste de una sóla columna, y de 'm' filas)")
     print("2. Vector-Fila (consiste de una sóla fila, y de 'n' columnas)")
-    print("\nMatriz: Es un arreglo bidimensional, compuesto de filas y columnas")
+    print("\nMatriz: Es un arreglo bidimensional, compuesto de filas y columnas\n")
 
     print("-" * 10, "TIPOS DE MATRICES", "-" * 10)
 
-    print("Cuadrada: Una matriz es cuadrada si tienen el mismo número de filas y columnas")
-    print("Identidad: Es la matriz que actúa el elemento neutro de la multiplicación (en palabras simples, actúa como el 1)")
+    print("\nCuadrada: Una matriz es cuadrada si tienen el mismo número de filas y columnas")
+    print("Identidad: Es la matriz que actúa el elemento neutro de la multiplicación con matrices (en palabras simples, actúa como el 1)")
+    print("Diagonal: Una matriz es diagonal si y sólo si los elementos por debajo y por encima de la diagonal principal son ceros")
+    print("Triangular: Una matriz es triangular si los elementos por debajo o por encima de la diagonal principal son ceros. Hay 2 tipos:\n")
+    print("Inferior: Una matriz es triangular inferior si los elementos por encima de la diagonal principal son ceros.")
+    print("Superior: Una matriz es triangular superior si los elementos por debajo de la diagonal principal son ceros.")
+    print("Singular: Una matriz es singular si no tiene inversa.")
 
     Continuar()
                     
