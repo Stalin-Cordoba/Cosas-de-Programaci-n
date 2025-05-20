@@ -1,7 +1,9 @@
 # Importaciones
 
-import random
+import cmath
+import math
 import os
+import random
 
 # Los weones culiaos que guardan todo
 
@@ -45,8 +47,9 @@ def Contexto():
     while True:
 
         print("-" * 5, "Escoge las cosas que deseas saber el contexto", "-" * 5)
+        print("Nota: La información incluida aquí es meramente la elemental, si deseas saber más acerca sobre los procedimientos, además de ver ejemplos, puedes verlo en la wiki del repositorio.")
         print("\n1) Definiciones generales")
-        print("2) Detalles sobre los procedimientos con respecto a las operaciones de vectores y matrices")
+        print("2) Condiciones para realizar las operaciones")
         print("3) Volver al menú")
 
         while True:
@@ -71,12 +74,14 @@ def Contexto():
                     print("3.4 Matriz triangular: Es una matriz en donde los elementos que estén por debajo o por encima de la diagonal principal son cero. Hay 2 tipos:\n")
                     print("3.4.1 Triangular inferior: Matriz en donde los elementos situados por encima de la diagonal principal son cero.")
                     print("3.4.2 Triangular superior: Matriz en donde los elementos situados por encima de la diagonal principal son cero.\n")
-                    print("3.5 Matriz cero: Valga la redundancia, es una matriz cuyos todos elementos son cero.")
+                    print("3.5 Matriz cero: Valga la redundancia, es una matriz en donde todos elementos son cero.")
                     print("3.6 Matriz singular: Es una matriz que no es invertible (o sea, no tiene inversa). En caso de que tenga inversa, es una matriz invertible.")
                     print("3.7 Matriz transpuesta: Es una matriz que se obtiene al intercambiar las filas con las columnas.")
                     print("3.8 Matriz simétrica: Es una matriz cuya transpuesta, es igual a la matriz original.")
                     print("3.9 Matriz antisimétrica: Es una matriz cuya transpuesta, es igual a la matriz original, pero en negativo.")
                     print("3.10 Matriz ortogonal: Es una matriz cuya transpuesta, es igual a la inversa de la matriz original.")
+                    print("3.11 Matriz elemental: Es una matriz diagonal que es equivalente a una operación de la eliminación de Gauss-Jordan.\n")
+                    print("4. Determinante: Es una escalar que se utiliza para ciertos cálculos con matrices, como por ejemplo el cálculo de la inversa.")
 
                     Continuar()
 
@@ -86,10 +91,24 @@ def Contexto():
 
                 case "2":
 
+                    limpiarTerminal()
+                    
+                    print("-" * 10, "CONTEXTO SOBRE LAS OPERACIONES DE ESTA MIERDA", "-" * 10)
+
+                    print("1. Suma o resta de vectores: Para sumar o restar dos vectores, los dos deben tener la misma cantidad de elementos.")
+                    print("2. Producto de dos vectores: La misma condición que en la suma y resta, con la diferencia de que el resultado será una escalar.")
+                    print("3. Suma o resta de matrices: Para sumar o restar dos matrices, las dos deben ser del mismo tamaño.")
+                    print("4. Producto de dos matrices: Para poder multiplcar dos matrices, primero, el número de columnas de la primera matriz, debe ser igual al número de filas de la segunda matriz. El resultado será una matriz, cuyas dimensiones serán:\n")
+                    print("N° de filas: Será igual al número de filas que tiene la primera matriz")
+                    print("N° de columnas: Será igual al número de columnas de la segunda matriz\n")
+
+                    Continuar()
+
+                    limpiarTerminal()
                     break
 
                 case "3":
-
+                    
                     break
 
                 case _:
@@ -267,6 +286,10 @@ def elegirOperacionMatrix():
     print("6) Cálculo de la determinante")
     print("7) Volver al menú")
 
+def elementosMatriz(filas, columnas):
+
+    matriz = []
+
 # --------------------
 # ----Función main----
 # --------------------
@@ -369,6 +392,7 @@ def main():
                 case "7":
 
                     Contexto()
+                    limpiarTerminal()
                     break
 
                 case "0":
@@ -381,6 +405,7 @@ def main():
 
         if opcion == "0":
 
+            limpiarTerminal()
             break
 
 main()
