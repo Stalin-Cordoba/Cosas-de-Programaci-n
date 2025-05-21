@@ -49,8 +49,9 @@ def Contexto():
         print("-" * 5, "Escoge las cosas que deseas saber el contexto", "-" * 5)
         print("Nota: La información incluida aquí es meramente la elemental, si deseas saber más acerca sobre los procedimientos, además de ver ejemplos, puedes verlo en la wiki del repositorio.")
         print("\n1) Definiciones generales")
-        print("2) Condiciones para realizar las operaciones")
-        print("3) Volver al menú")
+        print("2) Condiciones para realizar las operaciones (recomendado ver las definiciones generales)")
+        print("3) Eliminación de Gauss-Jordan")
+        print("4) Volver al menú")
 
         while True:
 
@@ -70,17 +71,23 @@ def Contexto():
                     print("3. Matriz: Es un arreglo bidimensional que está compuesto de 'm' filas por 'n' columnas.\nAquí están los tipos de matrices más conocidos:\n")
                     print("3.1 Matriz cuadrada: Es una matriz en el que el número de filas, es igual al número de columnas.")
                     print("3.2 Matriz diagonal: Es una matriz en donde los componentes fuera de la diagonal principal (la diagonal principal son los componentes que van desde la esquina izquierda, hasta la esquina derecha) son todos cero.")
-                    print("3.3 Matriz identidad: Es una matriz diagonal que actúa como el elemento neutro de la multiplicación de matrices (en palabras simples, actúa como el 1). Su diagonal principal está compuesta solamente de unos.")
-                    print("3.4 Matriz triangular: Es una matriz en donde los elementos que estén por debajo o por encima de la diagonal principal son cero. Hay 2 tipos:\n")
+                    print("3.3 Matriz identidad: Es una matriz cuadrada diagonal que actúa como el elemento neutro de la multiplicación de matrices (en palabras simples, actúa como el 1). Su diagonal principal está compuesta solamente de unos.")
+                    print("3.4 Matriz triangular: Es una matriz cuadrada en donde los elementos que estén por debajo o por encima de la diagonal principal son cero. Hay 2 tipos:\n")
                     print("3.4.1 Triangular inferior: Matriz en donde los elementos situados por encima de la diagonal principal son cero.")
                     print("3.4.2 Triangular superior: Matriz en donde los elementos situados por encima de la diagonal principal son cero.\n")
-                    print("3.5 Matriz cero: Valga la redundancia, es una matriz en donde todos elementos son cero.")
-                    print("3.6 Matriz singular: Es una matriz que no es invertible (o sea, no tiene inversa). En caso de que tenga inversa, es una matriz invertible.")
-                    print("3.7 Matriz transpuesta: Es una matriz que se obtiene al intercambiar las filas con las columnas.")
-                    print("3.8 Matriz simétrica: Es una matriz cuya transpuesta, es igual a la matriz original.")
-                    print("3.9 Matriz antisimétrica: Es una matriz cuya transpuesta, es igual a la matriz original, pero en negativo.")
-                    print("3.10 Matriz ortogonal: Es una matriz cuya transpuesta, es igual a la inversa de la matriz original.")
-                    print("3.11 Matriz elemental: Es una matriz diagonal que es equivalente a una operación de la eliminación de Gauss-Jordan.\n")
+                    print("3.5 Matriz aumentada: Es una matriz que proviene del resultado de concatenar dos matrices, sin importar su tamaño")
+                    print("3.6 Matriz escalonada: Es una matriz que cumple las siguiente condiciones:\n")
+                    print("1-) Todas las filas cuyos elementos son todos cero, están en la parte inferior de la matriz.")
+                    print("2-) El primer elemento diferente de 0 y 1 de cada fila es diferente de 0.")
+                    print("3-) El primer elemento diferente de 0 de cada fila, se encuentra más a la derecha que el primer elemento diferente de 0 de la fila anterior.\n")
+                    print("NOTA: En caso de que en cada columna de la matriz, sólo hay un sólo elemento que no es cero, además de que se cumplen la 1ra y 3ra condición, entonces es una matriz escalonada reducida.\n")
+                    print("3.7 Matriz cero: Valga la redundancia, es una matriz en donde todos elementos son cero.")
+                    print("3.8 Matriz singular: Es una matriz cuadrada que no es invertible (o sea, no tiene inversa). En caso de que tenga inversa, es una matriz invertible.")
+                    print("3.9 Matriz transpuesta: Es una matriz que se obtiene al intercambiar las filas con las columnas.")
+                    print("3.10 Matriz simétrica: Es una matriz cuya transpuesta, es igual a la matriz original.")
+                    print("3.11 Matriz antisimétrica: Es una matriz cuya transpuesta, es igual a la matriz original, pero en negativo.")
+                    print("3.12 Matriz ortogonal: Es una matriz cuya transpuesta, es igual a la inversa de la matriz original.")
+                    print("3.13 Matriz elemental: Es una matriz diagonal que es equivalente a una operación de la eliminación de Gauss-Jordan.\n")
                     print("4. Determinante: Es una escalar que se utiliza para ciertos cálculos con matrices, como por ejemplo el cálculo de la inversa.")
 
                     Continuar()
@@ -101,6 +108,11 @@ def Contexto():
                     print("4. Producto de dos matrices: Para poder multiplcar dos matrices, primero, el número de columnas de la primera matriz, debe ser igual al número de filas de la segunda matriz. El resultado será una matriz, cuyas dimensiones serán:\n")
                     print("N° de filas: Será igual al número de filas que tiene la primera matriz")
                     print("N° de columnas: Será igual al número de columnas de la segunda matriz\n")
+                    print("""5. Cálculo de la inversa de una matriz: Se debe concatenar (juntar) la matriz que queremos sacarle su inversa, con la matriz identidad. Luego, se realiza 
+la eliminación de Gauss-Jordan, hasta convertir la matriz de la izquierda, en una matriz escalonada reducida. La inversa de la matriz va a ser igual a la
+matriz identidad, dicha matriz fue afectada por las operaciones de la eliminación de Gauss-Jordan.
+                          
+OJO: Es importante mencionar que sólo se le puede sacar inversa a una matriz cuadrada. Si no es cuadrada, entonces es una matriz singular.""")
 
                     Continuar()
 
@@ -111,11 +123,15 @@ def Contexto():
                     
                     break
 
+                case "4":
+                    
+                    break
+
                 case _:
 
                     print("Ingrese una opción válida")
 
-        if elegir == "3":
+        if elegir == "4":
 
             break
 
