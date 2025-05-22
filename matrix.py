@@ -1,6 +1,5 @@
 # Importaciones
 
-import cmath
 import math
 import os
 import random
@@ -50,8 +49,7 @@ def Contexto():
         print("Nota: La información incluida aquí es meramente la elemental, si deseas saber más acerca sobre los procedimientos, además de ver ejemplos, puedes verlo en la wiki del repositorio.")
         print("\n1) Definiciones generales")
         print("2) Condiciones para realizar las operaciones (recomendado ver las definiciones generales)")
-        print("3) Eliminación de Gauss-Jordan")
-        print("4) Volver al menú")
+        print("3) Volver al menú")
 
         while True:
 
@@ -100,7 +98,7 @@ def Contexto():
 
                     limpiarTerminal()
                     
-                    print("-" * 10, "CONTEXTO SOBRE LAS OPERACIONES DE ESTA MIERDA", "-" * 10)
+                    print("-" * 10, "CONDICONES PARA LAS OPERACIONES DE ESTA MIERDA", "-" * 10)
 
                     print("1. Suma o resta de vectores: Para sumar o restar dos vectores, los dos deben tener la misma cantidad de elementos.")
                     print("2. Producto de dos vectores: La misma condición que en la suma y resta, con la diferencia de que el resultado será una escalar.")
@@ -108,11 +106,7 @@ def Contexto():
                     print("4. Producto de dos matrices: Para poder multiplcar dos matrices, primero, el número de columnas de la primera matriz, debe ser igual al número de filas de la segunda matriz. El resultado será una matriz, cuyas dimensiones serán:\n")
                     print("N° de filas: Será igual al número de filas que tiene la primera matriz")
                     print("N° de columnas: Será igual al número de columnas de la segunda matriz\n")
-                    print("""5. Cálculo de la inversa de una matriz: Se debe concatenar (juntar) la matriz que queremos sacarle su inversa, con la matriz identidad. Luego, se realiza 
-la eliminación de Gauss-Jordan, hasta convertir la matriz de la izquierda, en una matriz escalonada reducida. La inversa de la matriz va a ser igual a la
-matriz identidad, dicha matriz fue afectada por las operaciones de la eliminación de Gauss-Jordan.
-                          
-OJO: Es importante mencionar que sólo se le puede sacar inversa a una matriz cuadrada. Si no es cuadrada, entonces es una matriz singular.""")
+                    print("5. Cálculo de la inversa y de la determinante de una matriz: La matriz debe ser cuadrada, si no lo es, es una matriz singular.")
 
                     Continuar()
 
@@ -120,10 +114,6 @@ OJO: Es importante mencionar que sólo se le puede sacar inversa a una matriz cu
                     break
 
                 case "3":
-                    
-                    break
-
-                case "4":
                     
                     break
 
@@ -297,7 +287,7 @@ def elegirOperacionMatrix():
     print("1) Suma de matrices")
     print("2) Resta de matrices")
     print("3) Multiplicación de matrices")
-    print("4) Eliminación por Gauss-Jordan")
+    print("4) Eliminación de Gauss-Jordan")
     print("5) Cálculo de la inversa")
     print("6) Cálculo de la determinante")
     print("7) Volver al menú")
@@ -305,6 +295,29 @@ def elegirOperacionMatrix():
 def elementosMatriz(filas, columnas):
 
     matriz = []
+
+    for i in range(filas):
+
+        fila = []
+
+        for i in range(columnas):
+
+            fila.append(random.randint(-50, 50))
+
+        matriz.append(fila)
+
+    return matriz
+
+def imprimirMatrices():
+
+    if len(ListaMatrices) == 0:
+
+        print("No hay nada we")
+    else:
+
+        for i in ListaMatrices:
+
+            print(i)
 
 # --------------------
 # ----Función main----
@@ -379,7 +392,16 @@ def main():
 
                     limpiarTerminal()
                     
-                    print("A1")
+                    print("Ingrese las dimensiones de la matriz (Filas * Columnas)")
+
+                    print("\nFilas:")
+                    rows = eleccionNumero()
+
+                    print("\nColumnas:")
+                    columns = eleccionNumero()
+
+                    ListaMatrices.append(elementosMatriz(rows, columns))
+                    print(ListaMatrices[len(ListaMatrices) - 1])
                     Continuar()
                     
                     limpiarTerminal()
@@ -389,7 +411,8 @@ def main():
 
                     limpiarTerminal()
                     
-                    print("A1")
+                    print("<---LISTA DE VECTORES--->\n")
+                    imprimirMatrices()
                     Continuar()
                     
                     limpiarTerminal()
