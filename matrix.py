@@ -121,7 +121,7 @@ def Contexto():
 
                     print("Ingrese una opción válida")
 
-        if elegir == "4":
+        if elegir == "3":
 
             break
 
@@ -283,14 +283,63 @@ def multiplicarVectores(vector1, vector2):
 
 def elegirOperacionMatrix():
 
-    print("Elija una operación mi loco\n")
-    print("1) Suma de matrices")
-    print("2) Resta de matrices")
-    print("3) Multiplicación de matrices")
-    print("4) Eliminación de Gauss-Jordan")
-    print("5) Cálculo de la inversa")
-    print("6) Cálculo de la determinante")
-    print("7) Volver al menú")
+    while True:
+
+        print("Elija una operación mi loco\n")
+        print("1) Suma de matrices")
+        print("2) Resta de matrices")
+        print("3) Multiplicación de matrices")
+        print("4) Eliminación de Gauss-Jordan")
+        print("5) Cálculo de la inversa")
+        print("6) Cálculo de la determinante")
+        print("7) Volver al menú")
+
+        while True:
+
+            eleccion = input()
+
+            match eleccion:
+
+                case "1":
+
+                    break
+
+                case "2":
+
+                    break
+
+                case "3":
+
+                    break
+
+                case "4":
+
+                    break
+
+                case "5":
+
+                    break
+
+                case "6":
+
+                    break
+
+                case "7":
+
+                    break
+
+                case _:
+
+                    print("Ingrese una opción correcta")
+
+        if eleccion == "7":
+
+            break
+
+def sumarMatrices(matrix1, matrix2):
+
+    row = len(matrix1)
+    col = len(matrix1[0])
 
 def elementosMatriz(filas, columnas):
 
