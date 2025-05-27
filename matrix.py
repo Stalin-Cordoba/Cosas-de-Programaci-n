@@ -302,6 +302,28 @@ def elegirOperacionMatrix():
 
                 case "1":
 
+                    limpiarTerminal()
+
+                    imprimirMatrices()
+                    print("\nElija las matrices mi broderazo")
+
+                    matrix1 = eleccionNumero()
+                    matrix2 = eleccionNumero()
+
+                    if matrix1 == matrix2:
+
+                        print("Elija bien las matrices stopid")
+                    elif matrix1 <= 0 or matrix2 <= 0:
+
+                        print("Pone bien la mierda")
+                    else:
+
+                        sumarMatrices(ListaMatrices[matrix1 - 1], ListaMatrices[matrix2 - 1])
+
+                    Continuar()
+
+                    limpiarTerminal()
+                    
                     break
 
                 case "2":
@@ -340,6 +362,13 @@ def sumarMatrices(matrix1, matrix2):
 
     row = len(matrix1)
     col = len(matrix1[0])
+
+    if len(matrix1) != len(matrix2) and len(matrix1[0]) != len(matrix2[0]):
+
+        print("No se pueden imprimir las matrices, porque son de diferente tamaño")
+    else:
+
+        print("AQ")
 
 def elementosMatriz(filas, columnas):
 
