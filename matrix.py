@@ -126,6 +126,7 @@ def Contexto(): # Muestra el contexto de algunas cositas, además de condiciones
 
 def incluirElemento(): # Después de realizar una operación, se da la posibilidad de agregar el resultado a la lista, en caso de querer sumar varios vectores o matrices
 
+    print("\n¿Desea incluir el resultado en la lista?")
     print("\n1 para sí")
     print("0 para no")
     
@@ -280,7 +281,6 @@ def sumarVectores(vector1, vector2):
         sumaTotal.append(vector1[i] + vector2[i])
 
     print(sumaTotal)
-    print("¿Desea incluir la suma resultante en la lista de vectores?")
 
     if incluirElemento():
 
@@ -297,7 +297,6 @@ def restarVectores(vector1, vector2):
         restaTotal.append(vector1[i] - vector2[i])
 
     print(restaTotal)
-    print("¿Desea incluir la suma resultante en la lista de vectores?")
 
     if incluirElemento():
 
@@ -351,6 +350,7 @@ def elegirOperacionMatrix():
                         print("Elija bien las matrices stopid")
                     else:
 
+                        print("Resultado:")
                         sumarMatrices(ListaMatrices[matrix1 - 1], ListaMatrices[matrix2 - 1])
 
 
@@ -413,7 +413,11 @@ def sumarMatrices(matrix1, matrix2):
 
         print(sumaResultante)
 
-        Continuar()
+        if incluirElemento():
+
+            ListaMatrices.append(sumaResultante)
+            print("Resultado agregado con éxito")
+            Continuar()
 
 def elementosMatriz(filas, columnas):
 
