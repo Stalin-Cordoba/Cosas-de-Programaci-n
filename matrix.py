@@ -409,7 +409,7 @@ def sumarMatrices(matrix1, matrix2):
 
             for e in range(len(matrix1[0])):
 
-                sumaResultante[r].append(matrix1[e][e] + matrix2[e][e])
+                sumaResultante[r].append(matrix1[r][e] + matrix2[r][e])
 
         print(sumaResultante)
 
