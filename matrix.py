@@ -387,9 +387,9 @@ def elegirOperacionMatrix():
 def sumarMatrices(matrix1, matrix2):
 
     sumaResultante = []
-    
-    row = len(matrix1)
-    col = len(matrix1[0])
+
+    # Filas = Número de elementos de matrix1
+    # Columas = Número de elementos del primer elemento de matrix1
 
     if len(matrix1) != len(matrix2) and len(matrix1[0]) != len(matrix2[0]):
 
@@ -400,8 +400,6 @@ def sumarMatrices(matrix1, matrix2):
         for r in range(len(matrix1)):
 
             sumaResultante.append(list())
-
-        print(sumaResultante)
 
         Continuar()
 
@@ -527,7 +525,7 @@ def main():
 
                     limpiarTerminal()
                     
-                    print("<---LISTA DE VECTORES--->\n")
+                    print("<---LISTA DE MATRICES--->\n")
                     imprimirMatrices()
                     Continuar()
                     
