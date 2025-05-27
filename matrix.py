@@ -228,8 +228,7 @@ def elegirOperacionVector():
                 else:
 
                     print("Resultado:")
-                    print(restarVectores(ListaVectores[vec1 -1], ListaVectores[vec2 -1]))
-                    Continuar()
+                    restarVectores(ListaVectores[vec1 -1], ListaVectores[vec2 -1])
 
                 break
 
@@ -292,7 +291,14 @@ def restarVectores(vector1, vector2):
 
         restaTotal.append(vector1[i] - vector2[i])
 
-    return restaTotal
+    print(restaTotal)
+    print("¿Desea incluir la suma resultante en la lista de vectores?")
+
+    if incluirElemento():
+
+        ListaVectores.append(restaTotal)
+        print("Elemento agregado con éxito")
+        Continuar()
 
 def multiplicarVectores(vector1, vector2):
 
