@@ -341,12 +341,9 @@ def elegirOperacionMatrix():
                     matrix1 = eleccionNumero()
                     matrix2 = eleccionNumero()
 
-                    if matrix1 == matrix2:
+                    if matrix1 > len(ListaMatrices) or matrix2 > len(ListaMatrices) or matrix1 <= 0 or matrix2 <= 0:
 
                         print("Elija bien las matrices stopid")
-                    elif matrix1 <= 0 or matrix2 <= 0:
-
-                        print("Pone bien la mierda")
                     else:
 
                         sumarMatrices(ListaMatrices[matrix1 - 1], ListaMatrices[matrix2 - 1])
