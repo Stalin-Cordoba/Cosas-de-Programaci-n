@@ -125,6 +125,25 @@ def Contexto():
 
             break
 
+def incluirElemento():
+
+    print("\n1 para sí")
+    print("0 para no")
+    
+    while True:
+
+        respuesta = input()
+
+        if respuesta == "0":
+
+            return False
+        elif respuesta == "1":
+
+            return True
+        else:
+
+            print("Ingrese una opción válida")
+
 # Funcione para las operaciones con vectores
 
 def elementosVector(númeroElementos):
@@ -184,8 +203,7 @@ def elegirOperacionVector():
                 else:
 
                     print("Resultado:")
-                    print(sumarVectores(ListaVectores[vec1 -1], ListaVectores[vec2 -1]))
-                    Continuar()
+                    sumarVectores(ListaVectores[vec1 -1], ListaVectores[vec2 -1])
                 
                 break
 
@@ -257,7 +275,14 @@ def sumarVectores(vector1, vector2):
 
         sumaTotal.append(vector1[i] + vector2[i])
 
-    return sumaTotal
+    print(sumaTotal)
+    print("¿Desea incluir la suma resultante en la lista de vectores?")
+
+    if incluirElemento():
+
+        ListaVectores.append(sumaTotal)
+        print("Elemento agregado con éxito")
+        Continuar()
 
 def restarVectores(vector1, vector2):
 
