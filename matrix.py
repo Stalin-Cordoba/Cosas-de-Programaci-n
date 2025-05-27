@@ -450,7 +450,10 @@ def main():
                     columns = eleccionNumero()
 
                     ListaMatrices.append(elementosMatriz(rows, columns))
-                    print(ListaMatrices[len(ListaMatrices) - 1])
+                    for i in ListaMatrices[len(ListaMatrices) - 1]:
+
+                        print(i)
+                        
                     Continuar()
                     
                     limpiarTerminal()
@@ -471,8 +474,13 @@ def main():
 
                     limpiarTerminal()
                     
-                    print("A1")
-                    Continuar()
+                    if len(ListaMatrices) <= 1:
+
+                        print("Sólo hay una matrix, o no hay matrices en lo absoluto")
+                        Continuar()
+                    else:
+                    
+                        elegirOperacionMatrix()
                     
                     limpiarTerminal()
                     break
