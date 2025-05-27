@@ -29,7 +29,6 @@ def eleccionNumero():
     while True:
 
         num = int(input())
-
         if num <= 0:
 
             print("Ingrese un entero positivo")
@@ -39,7 +38,7 @@ def eleccionNumero():
 
     return num
 
-def Contexto():
+def Contexto(): # Muestra el contexto de algunas cositas, además de condiciones para las operaciones
 
     limpiarTerminal()
     
@@ -125,7 +124,7 @@ def Contexto():
 
             break
 
-def incluirElemento():
+def incluirElemento(): # Después de realizar una operación, se da la posibilidad de agregar el resultado a la lista, en caso de querer sumar varios vectores o matrices
 
     print("\n1 para sí")
     print("0 para no")
@@ -348,7 +347,6 @@ def elegirOperacionMatrix():
 
                         sumarMatrices(ListaMatrices[matrix1 - 1], ListaMatrices[matrix2 - 1])
 
-                    Continuar()
 
                     limpiarTerminal()
                     
@@ -388,15 +386,24 @@ def elegirOperacionMatrix():
 
 def sumarMatrices(matrix1, matrix2):
 
+    sumaResultante = []
+    
     row = len(matrix1)
     col = len(matrix1[0])
 
     if len(matrix1) != len(matrix2) and len(matrix1[0]) != len(matrix2[0]):
 
-        print("No se pueden imprimir las matrices, porque son de diferente tamaño")
+        print("No se pueden sumar las matrices, porque son de diferente tamaño")
+        Continuar()
     else:
 
-        print("AQ")
+        for r in range(len(matrix1)):
+
+            sumaResultante.append(list())
+
+        print(sumaResultante)
+
+        Continuar()
 
 def elementosMatriz(filas, columnas):
 
@@ -432,7 +439,7 @@ def imprimirMatrices():
 def main():
 
     while True:
-
+        
         print("Bienvenido a esta mierda\n")
         print("1) Creación de vectores")
         print("2) Mostrar vectores")
