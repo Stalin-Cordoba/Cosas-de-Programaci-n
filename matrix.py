@@ -168,102 +168,108 @@ def imprimirVectores():
 
 def elegirOperacionVector():
 
-    print("Operaciones que puedes hacer:\n")
-    print("1) Suma de vectores")
-    print("2) Resta de vectores")
-    print("3) Multiplicación de vectores")
-    print("4) Volver al menú")
-    print("Elige una opción pa")
-
     while True:
+    
+        print("Operaciones que puedes hacer:\n")
+        print("1) Suma de vectores")
+        print("2) Resta de vectores")
+        print("3) Multiplicación de vectores")
+        print("4) Volver al menú")
+        print("Elige una opción pa")
 
-        opcion = input()
+        while True:
 
-        match opcion:
+            opcion = input()
 
-            case "1":
+            match opcion:
 
-                limpiarTerminal()
+                case "1":
 
-                imprimirVectores()
-                print("Elija los vectores mi loco")
+                    limpiarTerminal()
 
-                vec1 = eleccionNumero()
-                vec2 = eleccionNumero()
+                    imprimirVectores()
+                    print("Elija los vectores mi loco")
 
-                if vec1 > len(ListaVectores) or vec2 > len(ListaVectores):
+                    vec1 = eleccionNumero()
+                    vec2 = eleccionNumero()
 
-                    print("Usted pendejo eligió uno o dos vectores que no existen (Fuera de rango)")
-                    Continuar()
-                elif len(ListaVectores[vec1 - 1]) != len(ListaVectores[vec2 - 1]):
+                    if vec1 > len(ListaVectores) or vec2 > len(ListaVectores):
 
-                    print("No se puede realizar la operación porque los vectores no tienen la misma cantidad de elementos")
-                    Continuar()
-                else:
+                        print("Usted pendejo eligió uno o dos vectores que no existen (Fuera de rango)")
+                        Continuar()
+                    elif len(ListaVectores[vec1 - 1]) != len(ListaVectores[vec2 - 1]):
 
-                    print("Resultado:")
-                    sumarVectores(ListaVectores[vec1 -1], ListaVectores[vec2 -1])
+                        print("No se puede realizar la operación porque los vectores no tienen la misma cantidad de elementos")
+                        Continuar()
+                    else:
+
+                        print("Resultado:")
+                        sumarVectores(ListaVectores[vec1 -1], ListaVectores[vec2 -1])
                 
-                break
+                    break
 
-            case "2":
+                case "2":
 
-                limpiarTerminal()
+                    limpiarTerminal()
 
-                imprimirVectores()
-                print("Elija los vectores mi loco")
+                    imprimirVectores()
+                    print("Elija los vectores mi loco")
 
-                vec1 = eleccionNumero()
-                vec2 = eleccionNumero()
+                    vec1 = eleccionNumero()
+                    vec2 = eleccionNumero()
 
-                if vec1 > len(ListaVectores) or vec2 > len(ListaVectores):
+                    if vec1 > len(ListaVectores) or vec2 > len(ListaVectores):
 
-                    print("Usted pendejo eligió uno o dos vectores que no existen (Fuera de rango)")
-                    Continuar()
-                elif len(ListaVectores[vec1 - 1]) != len(ListaVectores[vec2 - 1]):
+                        print("Usted pendejo eligió uno o dos vectores que no existen (Fuera de rango)")
+                        Continuar()
+                    elif len(ListaVectores[vec1 - 1]) != len(ListaVectores[vec2 - 1]):
 
-                    print("No se puede realizar la operación porque los vectores no tienen la misma cantidad de elementos")
-                    Continuar()
-                else:
+                        print("No se puede realizar la operación porque los vectores no tienen la misma cantidad de elementos")
+                        Continuar()
+                    else:
 
-                    print("Resultado:")
-                    restarVectores(ListaVectores[vec1 -1], ListaVectores[vec2 -1])
+                        print("Resultado:")
+                        restarVectores(ListaVectores[vec1 -1], ListaVectores[vec2 -1])
 
-                break
+                    break
 
-            case "3":
+                case "3":
 
-                limpiarTerminal()
+                    limpiarTerminal()
 
-                imprimirVectores()
-                print("Elija los vectores mi loco")
+                    imprimirVectores()
+                    print("Elija los vectores mi loco")
 
-                vec1 = eleccionNumero()
-                vec2 = eleccionNumero()
+                    vec1 = eleccionNumero()
+                    vec2 = eleccionNumero()
 
-                if vec1 > len(ListaVectores) or vec2 > len(ListaVectores):
+                    if vec1 > len(ListaVectores) or vec2 > len(ListaVectores):
 
-                    print("Usted pendejo eligió uno o dos vectores que no existen (Fuera de rango)")
-                    Continuar()
-                elif len(ListaVectores[vec1 - 1]) != len(ListaVectores[vec2 - 1]):
+                        print("Usted pendejo eligió uno o dos vectores que no existen (Fuera de rango)")
+                        Continuar()
+                    elif len(ListaVectores[vec1 - 1]) != len(ListaVectores[vec2 - 1]):
 
-                    print("No se puede realizar la operación porque los vectores no tienen la misma cantidad de elementos")
-                    Continuar()
-                else:
+                        print("No se puede realizar la operación porque los vectores no tienen la misma cantidad de elementos")
+                        Continuar()
+                    else:
 
-                    print("Resultado:")
-                    print(multiplicarVectores(ListaVectores[vec1 -1], ListaVectores[vec2 -1]))
-                    Continuar()
+                        print("Resultado:")
+                        print(multiplicarVectores(ListaVectores[vec1 -1], ListaVectores[vec2 -1]))
+                        Continuar()
                 
-                break
+                    break
 
-            case "4":
+                case "4":
 
-                break
+                    break
 
-            case _:
+                case _:
 
-                print("Elige una opción válida")
+                    print("Elige una opción válida")
+            
+        if opcion == "4":
+
+            break
 
 def sumarVectores(vector1, vector2):
 
@@ -400,6 +406,12 @@ def sumarMatrices(matrix1, matrix2):
         for r in range(len(matrix1)):
 
             sumaResultante.append(list())
+
+            for e in range(len(matrix1[0])):
+
+                sumaResultante[r].append(matrix1[e][e] + matrix2[e][e])
+
+        print(sumaResultante)
 
         Continuar()
 
