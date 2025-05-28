@@ -353,12 +353,29 @@ def elegirOperacionMatrix():
                         print("Resultado:")
                         sumarMatrices(ListaMatrices[matrix1 - 1], ListaMatrices[matrix2 - 1])
 
-
                     limpiarTerminal()
                     
                     break
 
                 case "2":
+
+                    limpiarTerminal()
+
+                    imprimirMatrices()
+                    print("\nElija las matrices mi broderazo")
+
+                    matrix1 = eleccionNumero()
+                    matrix2 = eleccionNumero()
+
+                    if matrix1 > len(ListaMatrices) or matrix2 > len(ListaMatrices) or matrix1 <= 0 or matrix2 <= 0:
+
+                        print("Elija bien las matrices stopid")
+                    else:
+
+                        print("Resultado:")
+                        restarMatrices(ListaMatrices[matrix1 - 1], ListaMatrices[matrix2 - 1])
+
+                    limpiarTerminal()
 
                     break
 
@@ -416,6 +433,32 @@ def sumarMatrices(matrix1, matrix2):
         if incluirElemento():
 
             ListaMatrices.append(sumaResultante)
+            print("Resultado agregado con éxito")
+            Continuar()
+
+def restarMatrices(matrix1, matrix2):
+
+    restaResultante = []
+
+    if len(matrix1) != len(matrix2) and len(matrix1[0]) != len(matrix2[0]):
+
+        print("No se pueden restar las matrices, porque son de diferente tamaño")
+        Continuar()
+    else:
+
+        for r in range(len(matrix1)):
+
+            restaResultante.append(list())
+
+            for e in range(len(matrix1[0])):
+
+                restaResultante[r].append(matrix1[r][e] - matrix2[r][e])
+
+        print(restaResultante)
+
+        if incluirElemento():
+
+            ListaMatrices.append(restaResultante)
             print("Resultado agregado con éxito")
             Continuar()
 
