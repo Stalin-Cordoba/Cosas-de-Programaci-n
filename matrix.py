@@ -381,6 +381,8 @@ def elegirOperacionMatrix():
 
                 case "3":
 
+                    print("A1")
+                    Continuar
                     break
 
                 case "4":
@@ -461,6 +463,10 @@ def restarMatrices(matrix1, matrix2):
             ListaMatrices.append(restaResultante)
             print("Resultado agregado con éxito")
             Continuar()
+
+def multiplicarMatrices(matrix1, matrix2):
+
+    productoTotal = []
 
 def elementosMatriz(filas, columnas):
 
