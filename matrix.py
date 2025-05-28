@@ -381,8 +381,23 @@ def elegirOperacionMatrix():
 
                 case "3":
 
-                    print("A1")
-                    Continuar
+                    limpiarTerminal()
+
+                    imprimirMatrices()
+                    print("\nElijalas locas")
+
+                    matrix1 = eleccionNumero()
+                    matrix2 = eleccionNumero()
+
+                    if matrix1 > len(ListaMatrices) or matrix2 > len(ListaMatrices) or matrix1 <= 0 or matrix2 <= 0:
+
+                        print("Elija bien las matrices stopid")
+                    else:
+
+                        print("Resultado:")
+                        multiplicarMatrices(ListaMatrices[matrix1 - 1], ListaMatrices[matrix2 - 1])
+
+                    limpiarTerminal()
                     break
 
                 case "4":
@@ -467,6 +482,14 @@ def restarMatrices(matrix1, matrix2):
 def multiplicarMatrices(matrix1, matrix2):
 
     productoTotal = []
+
+    if len(matrix1[0]) != len(matrix2):
+
+        print("No se pueden multiplicar las matrices")
+        Continuar()
+    else:
+
+        Continuar()
 
 def elementosMatriz(filas, columnas):
 
