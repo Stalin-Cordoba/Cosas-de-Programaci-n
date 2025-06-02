@@ -487,8 +487,18 @@ def multiplicarMatrices(matrix1, matrix2):
 
         print("No se pueden multiplicar las matrices")
         Continuar()
+    elif len(matrix2[0]) == 1 and len(matrix2) == 1:
+
+        print("Aún sigo configurando eso xdd")
+        Continuar()
     else:
 
+        for l in range(len(matrix1)):
+
+            productoTotal.append(list())
+
+        print(productoTotal)
+        
         Continuar()
 
 def elementosMatriz(filas, columnas):
