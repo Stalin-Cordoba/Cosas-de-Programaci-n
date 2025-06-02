@@ -492,7 +492,9 @@ def multiplicarMatrices(matrix1, matrix2):
         print("Aún sigo configurando eso xdd")
         Continuar()
     else:
-
+        
+        componente = 0
+        
         for l in range(len(matrix1)):
 
             productoTotal.append(list())
