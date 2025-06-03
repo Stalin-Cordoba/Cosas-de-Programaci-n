@@ -495,9 +495,18 @@ def multiplicarMatrices(matrix1, matrix2):
         
         componente = 0
         
-        for l in range(len(matrix1)):
-
+        for x in range(len(matrix1)):
+            
             productoTotal.append(list())
+
+            for y in range(len(matrix1)):
+
+                for z in range(len(matrix2[0])):
+
+                    componente += matrix1[x][z] * matrix2[z][y]
+
+                productoTotal[x].append(componente)
+                componente = 0
 
         print(productoTotal)
         
