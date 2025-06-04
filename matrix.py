@@ -509,8 +509,13 @@ def multiplicarMatrices(matrix1, matrix2):
                 componente = 0
 
         print(productoTotal)
+
+        if incluirElemento():
+
+            ListaMatrices.append(productoTotal)
+            print("Resultado agregado con éxito")
+            Continuar()
         
-        Continuar()
 
 def elementosMatriz(filas, columnas):
 
