@@ -501,7 +501,7 @@ def multiplicarMatrices(matrix1, matrix2):
 
             for y in range(len(matrix1)):
 
-                for z in range(len(matrix2[0])):
+                for z in range(len(matrix1[0])):
 
                     componente += matrix1[x][z] * matrix2[z][y]
 
