@@ -483,13 +483,28 @@ def multiplicarMatrices(matrix1, matrix2):
 
     productoTotal = []
 
-    if len(matrix1[0]) != len(matrix2):
+    if len(matrix1[0]) == 1 and len(matrix1) == 1:
+
+        constante = matrix1[0][0]
+        
+        for a in range(len(matrix2)):
+
+            productoTotal.append(list())
+            
+            for b in range(len(matrix2[0])):
+
+                productoTotal[a].append(constante * matrix2[a][b])
+
+        print(productoTotal)
+
+        if incluirElemento():
+
+            ListaMatrices.append(productoTotal)
+            print("Resultado agregado con éxito")
+            Continuar()
+    elif len(matrix1[0]) != len(matrix2):
 
         print("No se pueden multiplicar las matrices")
-        Continuar()
-    elif len(matrix2[0]) == 1 and len(matrix2) == 1:
-
-        print("Aún sigo configurando eso xdd")
         Continuar()
     else:
         
