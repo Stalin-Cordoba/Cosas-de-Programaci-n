@@ -487,7 +487,7 @@ def restarMatrices(matrix1, matrix2):
 
                 restaResultante[r].append(matrix1[r][e] - matrix2[r][e])
 
-        print(restaResultante)
+        imprimirMatrizResultado(restaResultante)
 
         if incluirElemento():
 
@@ -539,7 +539,7 @@ def multiplicarMatrices(matrix1, matrix2):
                 productoTotal[x].append(componente)
                 componente = 0
 
-        print(productoTotal)
+        imprimirMatrizResultado(productoTotal)
 
         if incluirElemento():
 
