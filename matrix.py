@@ -519,14 +519,19 @@ def multiplicarMatrices(matrix1, matrix2):
     else:
         
         componente = 0
+
+        filasMatriz1 = len(matrix1)
+        columnasMatriz1 = len(matrix1[0])
+        filasMatriz2 = len(matrix2)
+        columnasMatriz2 = len(matrix2[0])
         
-        for x in range(len(matrix1)):
+        for x in range(filasMatriz1):
             
             productoTotal.append(list())
 
-            for y in range(len(matrix1)):
+            for y in range(len(matrix2[0])):
 
-                for z in range(len(matrix2)):
+                for z in range(len(matrix2[0])):
 
                     componente += matrix1[x][z] * matrix2[z][y]
 
