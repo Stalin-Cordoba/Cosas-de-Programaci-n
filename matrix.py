@@ -105,7 +105,7 @@ def Contexto(): # Muestra el contexto de algunas cositas, además de condiciones
                     print("4. Producto de dos matrices: Para poder multiplcar dos matrices, primero, el número de columnas de la primera matriz, debe ser igual al número de filas de la segunda matriz. El resultado será una matriz, cuyas dimensiones serán:\n")
                     print("N° de filas: Será igual al número de filas que tiene la primera matriz")
                     print("N° de columnas: Será igual al número de columnas de la segunda matriz\n")
-                    print("5. Cálculo de la inversa y de la determinante de una matriz: La matriz debe ser cuadrada, si no lo es, es una matriz singular.")
+                    print("5. Cálculo de la inversa y de la determinante de una matriz: La matriz debe ser cuadrada.")
 
                     Continuar()
 
@@ -434,6 +434,12 @@ def elegirOperacionMatrix():
 
             break
 
+def imprimirMatrizResultado(matrix):
+
+    for i in matrix:
+
+        print(i)
+
 def sumarMatrices(matrix1, matrix2):
 
     sumaResultante = []
@@ -455,7 +461,7 @@ def sumarMatrices(matrix1, matrix2):
 
                 sumaResultante[r].append(matrix1[r][e] + matrix2[r][e])
 
-        print(sumaResultante)
+        imprimirMatrizResultado(sumaResultante)
 
         if incluirElemento():
 
@@ -519,13 +525,8 @@ def multiplicarMatrices(matrix1, matrix2):
     else:
         
         componente = 0
-
-        filasMatriz1 = len(matrix1)
-        columnasMatriz1 = len(matrix1[0])
-        filasMatriz2 = len(matrix2)
-        columnasMatriz2 = len(matrix2[0])
         
-        for x in range(filasMatriz1):
+        for x in range(len(matrix1)):
             
             productoTotal.append(list())
 
@@ -545,7 +546,7 @@ def multiplicarMatrices(matrix1, matrix2):
             ListaMatrices.append(productoTotal)
             print("Resultado agregado con éxito")
             Continuar()
-        
+
 
 def elementosMatriz(filas, columnas):
 
@@ -714,4 +715,4 @@ def main():
             limpiarTerminal()
             break
 
-main()
+main() # Aquí se ejecuta la mierda
