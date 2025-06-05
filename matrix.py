@@ -402,6 +402,16 @@ def elegirOperacionMatrix():
 
                 case "4":
 
+                    limpiarTerminal()
+
+                    imprimirMatrices()
+                    print("\nElijalas locas")
+
+                    print("A1")
+
+                    Continuar()
+                    
+                    limpiarTerminal()
                     break
 
                 case "5":
@@ -516,7 +526,7 @@ def multiplicarMatrices(matrix1, matrix2):
 
             for y in range(len(matrix1)):
 
-                for z in range(len(matrix1[0])):
+                for z in range(len(matrix2)):
 
                     componente += matrix1[x][z] * matrix2[z][y]
 
@@ -536,15 +546,19 @@ def elementosMatriz(filas, columnas):
 
     matriz = []
 
-    for i in range(filas):
+    if filas == 1 or columnas == 1:
 
-        fila = []
+        print("Aún sigo trabajando en los vectores columna y vectores fila")
+    else:
+        for i in range(filas):
 
-        for i in range(columnas):
+            fila = []
 
-            fila.append(random.randint(-50, 50))
+            for i in range(columnas):
 
-        matriz.append(fila)
+                fila.append(random.randint(-50, 50))
+
+            matriz.append(fila)
 
     return matriz
 
