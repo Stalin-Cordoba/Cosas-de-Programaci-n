@@ -1,6 +1,5 @@
 # Importaciones
 
-import math
 import os
 import random
 
@@ -315,7 +314,7 @@ def multiplicarVectores(vector1, vector2):
 
         productoTotal += (vector1[i] * vector2[i])
 
-    return productoTotal
+    print(productoTotal)
 
 # Funciones para los matrices
 
@@ -348,7 +347,7 @@ def elegirOperacionMatrix():
                     matrix1 = eleccionNumero()
                     matrix2 = eleccionNumero()
 
-                    if matrix1 > len(ListaMatrices) or matrix2 > len(ListaMatrices) or matrix1 <= 0 or matrix2 <= 0:
+                    if matrix1 > len(ListaMatrices) or matrix2 > len(ListaMatrices):
 
                         print("Elija bien las matrices stopid")
                     else:
@@ -370,7 +369,7 @@ def elegirOperacionMatrix():
                     matrix1 = eleccionNumero()
                     matrix2 = eleccionNumero()
 
-                    if matrix1 > len(ListaMatrices) or matrix2 > len(ListaMatrices) or matrix1 <= 0 or matrix2 <= 0:
+                    if matrix1 > len(ListaMatrices) or matrix2 > len(ListaMatrices):
 
                         print("Elija bien las matrices stopid")
                     else:
@@ -410,7 +409,15 @@ def elegirOperacionMatrix():
                     imprimirMatrices()
                     print("\nElijalas locas")
 
-                    print("A1")
+                    matrix = eleccionNumero()
+
+                    if matrix > len(ListaMatrices):
+
+                        print("Elige bien pendejo")
+                    else:
+
+                        print("La Matriz reducida por renglones es:")
+                        eliminacionGauss(ListaMatrices[matrix - 1])
 
                     Continuar()
                     
@@ -550,6 +557,9 @@ def multiplicarMatrices(matrix1, matrix2):
             print("Resultado agregado con éxito")
             Continuar()
 
+def eliminacionGauss(matrix):
+
+    print("A1")
 
 def elementosMatriz(filas, columnas):
 
@@ -688,9 +698,9 @@ def main():
 
                     limpiarTerminal()
                     
-                    if len(ListaMatrices) <= 1:
+                    if len(ListaMatrices) == 0:
 
-                        print("Sólo hay una matrix, o no hay matrices en lo absoluto")
+                        print("No hay matrices en lo absoluto")
                         Continuar()
                     else:
                     
