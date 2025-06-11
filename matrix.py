@@ -207,6 +207,7 @@ def elegirOperacionVector():
                         print("Resultado:")
                         sumarVectores(ListaVectores[vec1 -1], ListaVectores[vec2 -1])
                 
+                    limpiarTerminal()
                     break
 
                 case "2":
@@ -232,6 +233,7 @@ def elegirOperacionVector():
                         print("Resultado:")
                         restarVectores(ListaVectores[vec1 -1], ListaVectores[vec2 -1])
 
+                    limpiarTerminal()
                     break
 
                 case "3":
@@ -258,6 +260,7 @@ def elegirOperacionVector():
                         print(multiplicarVectores(ListaVectores[vec1 -1], ListaVectores[vec2 -1]))
                         Continuar()
                 
+                    limpiarTerminal()
                     break
 
                 case "4":
